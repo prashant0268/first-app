@@ -1,24 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import ShauryaHome from "./shaurya/pages/ShauryaHome/ShauryaHome";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello world!</div>,
+  },
+  {
+    path: "/shaurya",
+    element: <ShauryaHome />,
+  },
+]);
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <nav>
+          <ul>
+            <li>
+              <a href={`/shaurya`}>Shaurya</a>
+            </li>
+            <li>
+              <a href={`/varad`}>Varad</a>
+            </li>
+            <li>
+              <a href={`/ridham`}>Ridham</a>
+            </li>
+          </ul>
+        </nav>
       </header>
+      <RouterProvider router={router} />
     </div>
   );
 }
