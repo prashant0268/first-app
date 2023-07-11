@@ -2,6 +2,8 @@ import "./App.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import ShauryaHome from "./shaurya/pages/ShauryaHome/ShauryaHome";
+import RidhamHome from "./ridham/pages/RidhamHome/RidhamHome";
+import VaradHome from "./varad/pages/VaradHome/VaradHome";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +13,14 @@ const router = createBrowserRouter([
   {
     path: "/shaurya",
     element: <ShauryaHome />,
+  },
+  {
+    path: "/varad",
+    element: <VaradHome />,
+  },
+  {
+    path: "/ridham",
+    element: <RidhamHome />,
   },
 ]);
 
